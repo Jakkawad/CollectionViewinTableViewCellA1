@@ -10,21 +10,31 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var dataArray = ["A", "B", "C", "D", "E", "F", "G", "H"]
-    var dataArray2 = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    //var dataArray = ["A", "B", "C", "D", "E", "F", "G", "H"]
+    //var dataArray2 = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     var storedOffsets = [Int:CGFloat]()
-    let model = generateRandomData()
+    //let model = generateRandomData()
     let modal = ganerateData()
+    let model = ganerateData2()
+    let numberOfRows = 2
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return model.count
-        return 2
+        return numberOfRows
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("tableCell0")
-        return cell!
+        //let cell = tableView.dequeueReusableCellWithIdentifier("tableCell0")
+        //return cell!
+        
+        if indexPath.row == 0 {
+            let cell0 = tableView.dequeueReusableCellWithIdentifier("tableCell0")// as? TableViewCell
+            return cell0!
+        } else {
+            let cell1 = tableView.dequeueReusableCellWithIdentifier("tableCell0")// as? TableViewCell
+            return cell1!
+        }
         
     }
     
@@ -37,8 +47,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         guard let tableViewCell = cell as? TableViewCell else { return }
+        //
         
-        
+        //
         storedOffsets[indexPath.row] = tableViewCell.collectionViewOffset
     }
     
@@ -50,7 +61,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if let cell = sender as? CollectionViewCell {
                 let indexPath = cell.tag
                 //print(dataArray[indexPath])
-                destinationVC.title = dataArray[indexPath]
+                destinationVC.title = modal[indexPath]
             }
             
         } else {
@@ -62,7 +73,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("Model = \(model.count)")
+        print("Model = \(modal.count)")
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -80,6 +91,7 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //return model[collectionView.tag].count
+        
         return modal.count
         
     }
@@ -87,8 +99,8 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("collectCell0", forIndexPath: indexPath) as? CollectionViewCell
         //cell.backgroundColor = model[collectionView.tag][indexPath.item]
-        print("Model tag \(model[collectionView.tag][indexPath.item])")
-        cell!.lblName.text = dataArray[indexPath.row]
+        //print("Model tag \(modal[collectionView.tag][indexPath.item])")
+        cell!.lblName.text = modal[indexPath.row]
         cell?.tag = indexPath.row
         return cell!
     }

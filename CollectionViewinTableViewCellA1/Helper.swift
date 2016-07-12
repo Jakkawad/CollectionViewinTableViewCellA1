@@ -18,12 +18,17 @@ func generateRandomData() -> [[UIColor]] {
 }
 
 func ganerateData() -> [String] {
-    let numberOfRows = 20
-    let numberOfItemPerRows = 15
+    //let numberOfRows = 20
+    //let numberOfItemPerRows = 15
     var dataArray = ["A", "B", "C", "D", "E", "F", "G", "H"]
-    var dataArray2 = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    
     return dataArray
     
+}
+
+func ganerateData2() -> [String] {
+    var dataArray2 = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    return dataArray2
 }
 
 extension UIColor {

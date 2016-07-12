@@ -16,6 +16,7 @@
 		847CF89E1D3499F400AA94DB /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CF89D1D3499F400AA94DB /* Helper.swift */; };
 		847CF8A01D349DFC00AA94DB /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CF89F1D349DFC00AA94DB /* CollectionViewCell.swift */; };
 		847CF8A21D349F1C00AA94DB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CF8A11D349F1C00AA94DB /* SecondViewController.swift */; };
+		847CF8A61D34C1B700AA94DB /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CF8A51D34C1B700AA94DB /* TableViewCell2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		847CF89D1D3499F400AA94DB /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		847CF89F1D349DFC00AA94DB /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		847CF8A11D349F1C00AA94DB /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		847CF8A51D34C1B700AA94DB /* TableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				847CF8921D34947100AA94DB /* LaunchScreen.storyboard */,
 				847CF8951D34947100AA94DB /* Info.plist */,
 				847CF89D1D3499F400AA94DB /* Helper.swift */,
+				847CF8A51D34C1B700AA94DB /* TableViewCell2.swift */,
 				847CF8871D34947000AA94DB /* Products */,
 			);
 			path = CollectionViewinTableViewCellA1;
@@ -151,6 +154,7 @@
 			files = (
 				847CF8A21D349F1C00AA94DB /* SecondViewController.swift in Sources */,
 				847CF8A01D349DFC00AA94DB /* CollectionViewCell.swift in Sources */,
+				847CF8A61D34C1B700AA94DB /* TableViewCell2.swift in Sources */,
 				847CF89C1D34964B00AA94DB /* TableViewCell.swift in Sources */,
 				847CF88C1D34947100AA94DB /* ViewController.swift in Sources */,
 				847CF88A1D34947100AA94DB /* AppDelegate.swift in Sources */,
