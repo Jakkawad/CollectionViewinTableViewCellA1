@@ -15,7 +15,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("detailArray \(detailArray)")
+        //print("detailArray \(detailArray)")
         // Do any additional setup after loading the view.
     }
 

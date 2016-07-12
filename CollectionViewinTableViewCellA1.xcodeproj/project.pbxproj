@@ -47,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				847CF8881D34947100AA94DB /* CollectionViewinTableViewCellA1 */,
-				847CF8871D34947000AA94DB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +56,7 @@
 				847CF8861D34947000AA94DB /* CollectionViewinTableViewCellA1.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		847CF8881D34947100AA94DB /* CollectionViewinTableViewCellA1 */ = {
@@ -66,12 +66,13 @@
 				847CF88B1D34947100AA94DB /* ViewController.swift */,
 				847CF89B1D34964B00AA94DB /* TableViewCell.swift */,
 				847CF88D1D34947100AA94DB /* Main.storyboard */,
+				847CF89F1D349DFC00AA94DB /* CollectionViewCell.swift */,
 				847CF8A11D349F1C00AA94DB /* SecondViewController.swift */,
 				847CF8901D34947100AA94DB /* Assets.xcassets */,
 				847CF8921D34947100AA94DB /* LaunchScreen.storyboard */,
 				847CF8951D34947100AA94DB /* Info.plist */,
 				847CF89D1D3499F400AA94DB /* Helper.swift */,
-				847CF89F1D349DFC00AA94DB /* CollectionViewCell.swift */,
+				847CF8871D34947000AA94DB /* Products */,
 			);
 			path = CollectionViewinTableViewCellA1;
 			sourceTree = "<group>";
@@ -309,6 +310,7 @@
 				847CF89A1D34947100AA94DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

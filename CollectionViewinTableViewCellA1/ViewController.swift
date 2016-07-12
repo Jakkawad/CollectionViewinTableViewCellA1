@@ -11,18 +11,21 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var dataArray = ["A", "B", "C", "D", "E", "F", "G", "H"]
+    var dataArray2 = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     var storedOffsets = [Int:CGFloat]()
     let model = generateRandomData()
+    let modal = ganerateData()
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return model.count
-        return 1
+        return 2
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("tableCell0")
         
+        let cell = tableView.dequeueReusableCellWithIdentifier("tableCell0")
         return cell!
+        
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -35,8 +38,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         guard let tableViewCell = cell as? TableViewCell else { return }
         
+        
         storedOffsets[indexPath.row] = tableViewCell.collectionViewOffset
-        //storedOffsets[indexPath.row] = TableViewCell.collectionViewOffset
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -58,6 +61,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("Model = \(model.count)")
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -74,18 +80,20 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //return model[collectionView.tag].count
-        return dataArray.count
+        return modal.count
+        
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("collectCell0", forIndexPath: indexPath) as? CollectionViewCell
         //cell.backgroundColor = model[collectionView.tag][indexPath.item]
+        print("Model tag \(model[collectionView.tag][indexPath.item])")
         cell!.lblName.text = dataArray[indexPath.row]
         cell?.tag = indexPath.row
         return cell!
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        //print("Collection view at row \(collectionView.tag) selected index path \(indexPath)")
+        print("Collection view at row \(collectionView.tag) selected index path \(indexPath)")
     }
 }
